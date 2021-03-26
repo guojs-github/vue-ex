@@ -8,6 +8,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-print' @click='onCount'>
 				计数器
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-print' @click='onString'>
+				字符串
+			</div>
 		</div>
 	</div>
 </template>
@@ -47,6 +50,15 @@ export default {
 			this.$router.push({
 				path: '/Counter',
 				name: 'Counter'
+			});
+		},
+
+		onString() {
+			console.log('On demo string');
+			
+			this.$router.push({
+				path: '/String',
+				name: 'String'
 			});
 		},
 

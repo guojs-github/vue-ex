@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '@/components/Home/Home.vue';
 import Counter from '@/components/Counter/Counter.vue';
+import String from '@/components/String/String.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -10,6 +11,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Counter',
 	name: 'Counter',
 	component: Counter
+}, {
+	path: '/String',
+	name: 'String',
+	component: String
 }];
 
 const router = createRouter({
