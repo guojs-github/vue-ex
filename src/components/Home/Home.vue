@@ -11,6 +11,12 @@
 			<div class='-inline -ef-click -light-red -red-button test-print' @click='onString'>
 				字符串
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-print' @click='onUpdateOnce'>
+				只更新一次显示
+			</div>
+			<div class='-inline -ef-click -light-red -red-button test-print' @click='onRawHtml'>
+				动态加载HTML
+			</div>
 		</div>
 	</div>
 </template>
@@ -59,6 +65,24 @@ export default {
 			this.$router.push({
 				path: '/String',
 				name: 'String'
+			});
+		},
+
+		onUpdateOnce() {
+			console.log('On demo update once');
+			
+			this.$router.push({
+				path: '/UpdateOnce',
+				name: 'UpdateOnce'
+			});
+		},
+
+		onRawHtml() {
+			console.log('On demo raw html');
+			
+			this.$router.push({
+				path: '/RawHtml',
+				name: 'RawHtml'
 			});
 		},
 

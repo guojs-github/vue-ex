@@ -2,6 +2,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '@/components/Home/Home.vue';
 import Counter from '@/components/Counter/Counter.vue';
 import String from '@/components/String/String.vue';
+import UpdateOnce from '@/components/UpdateOnce/UpdateOnce.vue';
+import RawHtml from '@/components/RawHtml/RawHtml.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -15,6 +17,14 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/String',
 	name: 'String',
 	component: String
+}, {
+	path: '/UpdateOnce',
+	name: 'UpdateOnce',
+	component: UpdateOnce
+}, {
+	path: '/RawHtml',
+	name: 'RawHtml',
+	component: RawHtml
 }];
 
 const router = createRouter({
