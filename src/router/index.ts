@@ -4,6 +4,7 @@ import Counter from '@/components/Counter/Counter.vue';
 import String from '@/components/String/String.vue';
 import UpdateOnce from '@/components/UpdateOnce/UpdateOnce.vue';
 import RawHtml from '@/components/RawHtml/RawHtml.vue';
+import Debounce from '@/components/Debounce/Debounce.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -25,6 +26,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/RawHtml',
 	name: 'RawHtml',
 	component: RawHtml
+}, {
+	path: '/Debounce',
+	name: 'Debounce',
+	component: Debounce
 }];
 
 const router = createRouter({

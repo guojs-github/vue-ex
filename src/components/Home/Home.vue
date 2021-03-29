@@ -1,21 +1,25 @@
 <template>
+	<!--主页-->
 	<div class='-content home'>
 		<div class='-title'>
 			功能演示
 		</div>
 
 		<div class='-row'>
-			<div class='-inline -ef-click -light-red -red-button test-print' @click='onCount'>
+			<div class='-inline -ef-click -light-red -red-button test-count' @click='onCount'>
 				计数器
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-print' @click='onString'>
+			<div class='-inline -ef-click -light-red -red-button test-string' @click='onString'>
 				字符串
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-print' @click='onUpdateOnce'>
+			<div class='-inline -ef-click -light-red -red-button test-update-once' @click='onUpdateOnce'>
 				只更新一次显示
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-print' @click='onRawHtml'>
+			<div class='-inline -ef-click -light-red -red-button test-raw-html' @click='onRawHtml'>
 				动态加载HTML
+			</div>
+			<div class='-inline -ef-click -light-red -red-button test-debounce' @click='onDebounce'>
+				消除抖动
 			</div>
 		</div>
 	</div>
@@ -83,6 +87,15 @@ export default {
 			this.$router.push({
 				path: '/RawHtml',
 				name: 'RawHtml'
+			});
+		},
+
+		onDebounce() {
+			console.log('On demo debounce');
+			
+			this.$router.push({
+				path: '/Debounce',
+				name: 'Debounce'
 			});
 		},
 

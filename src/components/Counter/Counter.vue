@@ -1,4 +1,5 @@
 <template>
+	<!--自动计时演示-->
 	<div class='-content counter'>
 		<div class='-title'>
 			计数器

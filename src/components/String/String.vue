@@ -1,4 +1,5 @@
 <template>
+	<!--字符串演示-->
 	<div class='-content string'>
 		<div class='-title'>
 			字符串

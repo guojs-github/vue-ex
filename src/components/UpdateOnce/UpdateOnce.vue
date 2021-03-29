@@ -1,4 +1,5 @@
 <template>
+	<!--只更新一次-->
 	<div class='-content update-once'>
 		<div class='-title'>
 			只更新一次与每次都更新
