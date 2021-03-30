@@ -6,6 +6,7 @@ import UpdateOnce from '@/components/UpdateOnce/UpdateOnce.vue';
 import RawHtml from '@/components/RawHtml/RawHtml.vue';
 import Debounce from '@/components/Debounce/Debounce.vue';
 import Throttle from '@/components/Throttle/Throttle.vue';
+import DynamicClass from '@/components/DynamicClass/DynamicClass.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -35,6 +36,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Throttle',
 	name: 'Throttle',
 	component: Throttle
+}, {
+	path: '/DynamicClass',
+	name: 'DynamicClass',
+	component: DynamicClass
 }];
 
 const router = createRouter({

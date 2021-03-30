@@ -24,6 +24,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onThrottle'>
 				节流阀
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onDynamicClass'>
+				动态样式类
+			</div>
 		</div>
 	</div>
 </template>
@@ -91,6 +94,12 @@ export default {
 			console.log('On demo throttle');
 			
 			this.route('Throttle');
+		},
+
+		onDynamicClass() {
+			console.log('On demo dynamic class');
+			
+			this.route('DynamicClass');
 		},
 
 		/*************************/
