@@ -5,6 +5,7 @@ import String from '@/components/String/String.vue';
 import UpdateOnce from '@/components/UpdateOnce/UpdateOnce.vue';
 import RawHtml from '@/components/RawHtml/RawHtml.vue';
 import Debounce from '@/components/Debounce/Debounce.vue';
+import Throttle from '@/components/Throttle/Throttle.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -30,6 +31,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Debounce',
 	name: 'Debounce',
 	component: Debounce
+}, {
+	path: '/Throttle',
+	name: 'Throttle',
+	component: Throttle
 }];
 
 const router = createRouter({

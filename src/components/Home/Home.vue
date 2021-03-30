@@ -21,6 +21,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-debounce' @click='onDebounce'>
 				消除抖动
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onThrottle'>
+				节流阀
+			</div>
 		</div>
 	</div>
 </template>
@@ -57,46 +60,37 @@ export default {
 		onCount() {
 			console.log('On demo count');
 			
-			this.$router.push({
-				path: '/Counter',
-				name: 'Counter'
-			});
+			this.route('Counter');
 		},
 
 		onString() {
 			console.log('On demo string');
 			
-			this.$router.push({
-				path: '/String',
-				name: 'String'
-			});
+			this.route('String');
 		},
 
 		onUpdateOnce() {
 			console.log('On demo update once');
 			
-			this.$router.push({
-				path: '/UpdateOnce',
-				name: 'UpdateOnce'
-			});
+			this.route('UpdateOnce');
 		},
 
 		onRawHtml() {
 			console.log('On demo raw html');
 			
-			this.$router.push({
-				path: '/RawHtml',
-				name: 'RawHtml'
-			});
+			this.route('RawHtml');
 		},
 
 		onDebounce() {
 			console.log('On demo debounce');
 			
-			this.$router.push({
-				path: '/Debounce',
-				name: 'Debounce'
-			});
+			this.route('Debounce');
+		},
+
+		onThrottle() {
+			console.log('On demo throttle');
+			
+			this.route('Throttle');
 		},
 
 		/*************************/
@@ -106,6 +100,15 @@ export default {
 
 		uninit() {
 			console.log('Uninitialize.');
+		},
+		
+		route(path) {
+			console.log(`Route to ${path}`);
+
+			this.$router.push({
+				path: `/${path}`,
+				name: path
+			});
 		}
 	}
 };

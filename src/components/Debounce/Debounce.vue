@@ -10,7 +10,7 @@
 				一般点击
 			</div>
 			<div class='-inline -ef-click -light-red -red-button' @click='debounceClick'>
-				消除抖动点击
+				消除抖动点击(1秒)
 			</div>
 		</div>
 
