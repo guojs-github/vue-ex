@@ -27,6 +27,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onDynamicClass'>
 				动态样式类
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onEventHandler'>
+				事件处理
+			</div>
 		</div>
 	</div>
 </template>
@@ -100,6 +103,12 @@ export default {
 			console.log('On demo dynamic class');
 			
 			this.route('DynamicClass');
+		},
+
+		onEventHandler() {
+			console.log('On demo event handler');
+			
+			this.route('EventHandler');
 		},
 
 		/*************************/
