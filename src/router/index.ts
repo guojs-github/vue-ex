@@ -8,6 +8,7 @@ import Debounce from '@/components/Debounce/Debounce.vue';
 import Throttle from '@/components/Throttle/Throttle.vue';
 import DynamicClass from '@/components/DynamicClass/DynamicClass.vue';
 import EventHandler from '@/components/EventHandler/EventHandler.vue';
+import Input from '@/components/Input/Input.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -45,6 +46,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/EventHandler',
 	name: 'EventHandler',
 	component: EventHandler
+}, {
+	path: '/Input',
+	name: 'Input',
+	component: Input
 }];
 
 const router = createRouter({

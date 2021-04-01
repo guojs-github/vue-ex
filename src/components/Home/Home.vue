@@ -30,6 +30,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onEventHandler'>
 				事件处理
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onInput'>
+				输入控件演示
+			</div>
 		</div>
 	</div>
 </template>
@@ -109,6 +112,12 @@ export default {
 			console.log('On demo event handler');
 			
 			this.route('EventHandler');
+		},
+
+		onInput() {
+			console.log('On demo input control');
+			
+			this.route('Input');
 		},
 
 		/*************************/
