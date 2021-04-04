@@ -9,6 +9,7 @@ import Throttle from '@/components/Throttle/Throttle.vue';
 import DynamicClass from '@/components/DynamicClass/DynamicClass.vue';
 import EventHandler from '@/components/EventHandler/EventHandler.vue';
 import Input from '@/components/Input/Input.vue';
+import GlobalComponent from '@/components/GlobalComponent/GlobalComponent.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -50,6 +51,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Input',
 	name: 'Input',
 	component: Input
+}, {
+	path: '/GlobalComponent',
+	name: 'GlobalComponent',
+	component: GlobalComponent
 }];
 
 const router = createRouter({
