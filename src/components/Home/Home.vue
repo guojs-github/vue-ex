@@ -36,6 +36,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onGlobalComponent'>
 				全局控件演示
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onProps'>
+				属性演示
+			</div>
 		</div>
 	</div>
 </template>
@@ -127,6 +130,12 @@ export default {
 			console.log('On demo global component');
 			
 			this.route('GlobalComponent');
+		},
+
+		onProps() {
+			console.log('On demo component props');
+			
+			this.route('Props');
 		},
 
 		/*************************/

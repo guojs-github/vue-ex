@@ -10,6 +10,7 @@ import DynamicClass from '@/components/DynamicClass/DynamicClass.vue';
 import EventHandler from '@/components/EventHandler/EventHandler.vue';
 import Input from '@/components/Input/Input.vue';
 import GlobalComponent from '@/components/GlobalComponent/GlobalComponent.vue';
+import Props from '@/components/Props/Props.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -55,6 +56,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/GlobalComponent',
 	name: 'GlobalComponent',
 	component: GlobalComponent
+}, {
+	path: '/Props',
+	name: 'Props',
+	component: Props
 }];
 
 const router = createRouter({
