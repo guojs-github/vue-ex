@@ -11,6 +11,7 @@ import EventHandler from '@/components/EventHandler/EventHandler.vue';
 import Input from '@/components/Input/Input.vue';
 import GlobalComponent from '@/components/GlobalComponent/GlobalComponent.vue';
 import Props from '@/components/Props/Props.vue';
+import NonePropAttrs from '@/components/NonePropAttrs/NonePropAttrs.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -60,6 +61,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Props',
 	name: 'Props',
 	component: Props
+}, {
+	path: '/NonePropAttrs',
+	name: 'NonePropAttrs',
+	component: NonePropAttrs
 }];
 
 const router = createRouter({

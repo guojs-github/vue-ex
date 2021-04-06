@@ -39,6 +39,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onProps'>
 				属性演示
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onNonePropAttrs'>
+				默认属性演示
+			</div>
 		</div>
 	</div>
 </template>
@@ -136,6 +139,12 @@ export default {
 			console.log('On demo component props');
 			
 			this.route('Props');
+		},
+
+		onNonePropAttrs() {
+			console.log('On demo component none-prop attrs');
+			
+			this.route('NonePropAttrs');
 		},
 
 		/*************************/
