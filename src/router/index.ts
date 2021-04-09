@@ -13,6 +13,7 @@ import GlobalComponent from '@/components/GlobalComponent/GlobalComponent.vue';
 import Props from '@/components/Props/Props.vue';
 import NonePropAttrs from '@/components/NonePropAttrs/NonePropAttrs.vue';
 import CustomEvent from '@/components/CustomEvent/CustomEvent.vue';
+import Slot from '@/components/Slot/Slot.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -70,6 +71,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/CustomEvent',
 	name: 'CustomEvent',
 	component: CustomEvent
+}, {
+	path: '/Slot',
+	name: 'Slot',
+	component: Slot
 }];
 
 const router = createRouter({

@@ -24,26 +24,29 @@
 			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onThrottle'>
 				节流阀
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onDynamicClass'>
+			<div class='-inline -ef-click -light-red -red-button test-dynamic-class' @click='onDynamicClass'>
 				动态样式类
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onEventHandler'>
+			<div class='-inline -ef-click -light-red -red-button test-event-handler' @click='onEventHandler'>
 				事件处理
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onInput'>
+			<div class='-inline -ef-click -light-red -red-button test-input' @click='onInput'>
 				输入控件演示
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onGlobalComponent'>
+			<div class='-inline -ef-click -light-red -red-button test-global-component' @click='onGlobalComponent'>
 				全局控件演示
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onProps'>
+			<div class='-inline -ef-click -light-red -red-button test-props' @click='onProps'>
 				属性演示
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onNonePropAttrs'>
+			<div class='-inline -ef-click -light-red -red-button test-none-prop-attrs' @click='onNonePropAttrs'>
 				默认属性演示
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-throttle' @click='onCustomEvent'>
+			<div class='-inline -ef-click -light-red -red-button test-custom-event' @click='onCustomEvent'>
 				自定义事件
+			</div>
+			<div class='-inline -ef-click -light-red -red-button test-slot' @click='onSlot'>
+				Slot功能
 			</div>
 		</div>
 	</div>
@@ -154,6 +157,12 @@ export default {
 			console.log('On demo custom event');
 			
 			this.route('CustomEvent');
+		},
+
+		onSlot() {
+			console.log('On demo slot');
+			
+			this.route('Slot');
 		},
 
 		/*************************/
