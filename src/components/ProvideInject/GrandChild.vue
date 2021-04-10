@@ -1,7 +1,7 @@
 <template>
 	<!--孙子组件-->
 	<div class='grand-child'>		
-		<span>我是孙子</span>
+		<span class='title'>我是孙子</span>
 		<div>
 			{{ dataLength.value }}
 		</div>
