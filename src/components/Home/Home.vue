@@ -48,6 +48,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-slot' @click='onSlot'>
 				Slot功能
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onProvideInject'>
+				Provide&Inject
+			</div>
 		</div>
 	</div>
 </template>
@@ -163,6 +166,12 @@ export default {
 			console.log('On demo slot');
 			
 			this.route('Slot');
+		},
+
+		onProvideInject() {
+			console.log('On demo provide&Inject');
+			
+			this.route('ProvideInject');
 		},
 
 		/*************************/

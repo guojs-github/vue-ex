@@ -14,6 +14,7 @@ import Props from '@/components/Props/Props.vue';
 import NonePropAttrs from '@/components/NonePropAttrs/NonePropAttrs.vue';
 import CustomEvent from '@/components/CustomEvent/CustomEvent.vue';
 import Slot from '@/components/Slot/Slot.vue';
+import ProvideInject from '@/components/ProvideInject/ProvideInject.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -75,6 +76,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Slot',
 	name: 'Slot',
 	component: Slot
+}, {
+	path: '/ProvideInject',
+	name: 'ProvideInject',
+	component: ProvideInject
 }];
 
 const router = createRouter({
