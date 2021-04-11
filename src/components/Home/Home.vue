@@ -5,7 +5,7 @@
 			功能演示
 		</div>
 
-		<div class='-row'>
+		<div class='-row functions'>
 			<div class='-inline -ef-click -light-red -red-button test-count' @click='onCount'>
 				计数器
 			</div>
@@ -50,6 +50,9 @@
 			</div>
 			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onProvideInject'>
 				Provide&Inject
+			</div>
+			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onDynamicLoad'>
+				动态加载组件
 			</div>
 		</div>
 	</div>
@@ -172,6 +175,12 @@ export default {
 			console.log('On demo provide&Inject');
 			
 			this.route('ProvideInject');
+		},
+
+		onDynamicLoad() {
+			console.log('On demo dynamic load');
+			
+			this.route('DynamicLoad');
 		},
 
 		/*************************/

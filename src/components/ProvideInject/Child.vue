@@ -1,7 +1,7 @@
 <template>
 	<!--孩子组件-->
 	<div class='child'>		
-		<span class='title'>我是孩子</span>
+		<span class='title'>我是儿子</span>
 		<div>
 			数据：{{ data }}
 		</div>
