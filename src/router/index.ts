@@ -16,6 +16,7 @@ import CustomEvent from '@/components/CustomEvent/CustomEvent.vue';
 import Slot from '@/components/Slot/Slot.vue';
 import ProvideInject from '@/components/ProvideInject/ProvideInject.vue';
 import DynamicLoad from '@/components/DynamicLoad/DynamicLoad.vue';
+import Animation from '@/components/Animation/Animation.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -85,6 +86,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/DynamicLoad',
 	name: 'DynamicLoad',
 	component: DynamicLoad
+}, {
+	path: '/Animation',
+	name: 'Animation',
+	component: Animation
 }];
 
 const router = createRouter({
