@@ -5,7 +5,7 @@
 		<ul>
 			<li v-for='(item, index) in news'
 				:key='index'
-				:class='(id === index ? "selected" : "")'
+				:class='{ selected: id === index }'
 				@click='id = index'>
 				{{ item.title }}
 			</li>
