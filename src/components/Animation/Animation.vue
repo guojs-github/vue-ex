@@ -11,6 +11,15 @@
 		<div class='-row'>
 			X：{{ x }}
 		</div>
+
+		<div class='-row functions'>
+			<div class='-inline -ef-click -light-red -red-button test-transition' @click='show=!show'>
+				打个招呼吧
+			</div>
+			<transition name='fade'>
+				<span v-if='show'>【您好！】</span>
+			</transition>
+		</div>
 	</div>
 </template>
 
@@ -23,7 +32,8 @@ export default {
 	
 	data() {
 		return {
-			x: 0
+			x: 0,
+			show: true
 		};
 	},
 
