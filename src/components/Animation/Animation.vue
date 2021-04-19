@@ -20,6 +20,24 @@
 				<span v-if='show'>【您好！】</span>
 			</transition>
 		</div>
+
+		<div class='-row functions'>
+			<div class='-inline -ef-click -light-red -red-button test-transition' @click='show1=!show1'>
+				Say Hi
+			</div>
+			<transition name='slide-fade'>
+				<span v-if='show1'>【Hello！】</span>
+			</transition>
+		</div>
+
+		<div class='row-demo'>
+			<div class='-inline -ef-click -light-red -red-button test-transition' @click='show2=!show2'>
+				早安
+			</div>
+			<transition name='bounce'>
+				<p v-if='show2'>【早安！】</p>
+			</transition>
+		</div>
 	</div>
 </template>
 
@@ -33,7 +51,9 @@ export default {
 	data() {
 		return {
 			x: 0,
-			show: true
+			show: false,
+			show1: false,
+			show2: false
 		};
 	},
 
@@ -47,6 +67,6 @@ export default {
 };
 </script>
 
-<style scoped src='./Animation.less' lang='less'/>
+<style src='./Animation.less' lang='less'/>
 <style scoped>
 </style>
