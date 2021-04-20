@@ -18,7 +18,7 @@
 		</div>
 
 		<div class='row-demo'>
-			<div class='-inline -ef-click -light-red -red-button test-transition' @click='show=!show'>
+			<div class='-inline -ef-click -light-red -red-button' @click='show=!show'>
 				打个招呼吧
 			</div>
 			<transition name='fade'>
@@ -27,7 +27,7 @@
 		</div>
 
 		<div class='row-demo'>
-			<div class='-inline -ef-click -light-red -red-button test-transition' @click='show1=!show1'>
+			<div class='-inline -ef-click -light-red -red-button' @click='show1=!show1'>
 				Say Hi
 			</div>
 			<transition name='slide-fade'>
@@ -36,7 +36,7 @@
 		</div>
 
 		<div class='row-demo'>
-			<div class='-inline -ef-click -light-red -red-button test-transition' @click='show2=!show2'>
+			<div class='-inline -ef-click -light-red -red-button' @click='show2=!show2'>
 				早安
 			</div>
 			<transition name='bounce'>
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class='row-demo'>
-			<div class='-inline -ef-click -light-red -red-button test-transition' @click='show3=!show3'>
+			<div class='-inline -ef-click -light-red -red-button' @click='show3=!show3'>
 				Hello
 			</div>
 			<transition 
@@ -55,7 +55,7 @@
 				:duration='{ enter: 1000, leave: 2000 }'
 				@after-enter='onAfterEnter'
 				@after-leave='onAfterLeave'>
-				<p v-if='show3'>【Hello！】进入1s，离开2s</p>
+				<p id='demo-hello' v-if='show3'>【Hello！】进入1s，离开2s</p>
 			</transition>
 		</div>
 
@@ -100,7 +100,34 @@
 			<input v-model='view' type='radio' value='a' id='a'><label for='a'>A</label>
 			<input v-model='view' type='radio' value='b' id='b'><label for='b'>B</label>
 			<transition name='fade' mode='out-in'>
-				<component :is="view"></component>
+				<component :is='view'></component>
+			</transition>
+		</div>
+		
+		<div class='row-demo'>
+			<div class='-inline -ef-click -light-red -red-button' @click='list=!list'>
+				列表显示与隐藏
+			</div>
+			<template v-for='(item, index) in listItems' :key='index'>
+				<transition name='flip'>
+					<p class='list-item shadow' v-if='list'>{{ item }}</p>
+				</transition>
+			</template>
+		</div>		
+
+		<div class='row-demo'>
+			<div class='-inline -ef-click -light-red -red-button' @click='show4=!show4'>
+				JS自定义动画
+			</div>
+
+			<transition
+				name='user'
+				@before-enter='onUserBeforeEnter'
+				@enter='enter'
+				@before-leave='onUserBeforeLeave'
+				@leave='leave'
+				:css='false'>
+				<p v-show='show4'>Demo</p>
 			</transition>
 		</div>
 	</div>
@@ -125,10 +152,13 @@ export default {
 			show1: false,
 			show2: false,
 			show3: false,
+			show4: false,
 			on: false,
 			on1: false,
 			on2: false,
-			view: 'a'
+			view: 'a',
+			list: false,
+			listItems: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 		};
 	},
 
@@ -138,11 +168,11 @@ export default {
 		},
 		
 		onAfterEnter(e) {
-			alert(`Transition after enter.`);
+			alert(`Transition after enter.【id=${e.id}】`);
 		},
 		
 		onAfterLeave(e) {
-			alert(`Transition after leave.`);
+			alert(`Transition after leave.【id=${e.id}】`);
 		},
 		
 		onSwitch() {
@@ -155,9 +185,28 @@ export default {
 		
 		onSwitch2() {
 			this.on2 = !this.on2;
-		}
+		},
+
+		onUserBeforeEnter(el) { // JS自定义动画
+			el.style.opacity = 1;
+		},
 		
+		onUserBeforeLeave(el) { // JS自定义动画
+			el.style.opacity = 0;
+		},
+
 		/*************************/
+		enter(el, done) { // JS自定义动画
+			el.style['transition-property'] = 'opacity';
+			el.style['transition-duration'] = '1s';			
+			setInterval(() => { done(); }, 3000);
+		},
+
+		leave(el, done) { // JS自定义动画
+			el.style['transition-property'] = 'opacity';
+			el.style['transition-duration'] = '1s';
+			setInterval(() => { done(); }, 3000);
+		}
 	}
 };
 </script>

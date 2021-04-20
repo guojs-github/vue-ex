@@ -3,6 +3,7 @@
 */
 .animation {
 	height: calc(100vh - 20px);
+	overflow-y: auto;
 	
 	.row-demo {
 		margin-top: 10px;
@@ -70,7 +71,7 @@
 
 	/* 动画4 */
 	.bounce-enter-active-1 {
-		animation: bounce-in 10s;
+		animation: bounce-in 1s;
 	}
 
 	.bounce-leave-active-1 {
@@ -102,5 +103,45 @@
 		100% {
 			opacity: 1;
 		}
+	}
+		
+	/* 动画6 */
+	.list-item {
+		background-color: white;
+		transform-origin: center;
+	}
+	
+	.shadow {
+		-moz-box-shadow: 0 0 ~'4px' 0 rgba(0,0,0,0.8);
+		-webkit-box-shadow: 0 0 ~'4px' 0 rgba(0,0,0,0.8);
+		box-shadow: 0 0 ~'4px' 0 rgba(0,0,0,0.8);
+		/* For IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";
+	}
+	
+	.flip-enter-active {
+		animation: flip-in 0.5s;
+	}
+
+	.flip-leave-active {
+		animation: flip-in 0.5s reverse;
+	}
+
+	@keyframes flip-in {
+		0% {
+			transform: perspective(1000px)  rotateX(90deg);
+		}
+		100% {
+			transform: perspective(1000px)  rotateX(0deg);
+		}
 	}	
+
+	@-webkit-keyframes flip-in {
+		0% {
+			transform: perspective(1000px)  rotateX(90deg);
+		}
+		100% {
+			transform: perspective(1000px)  rotateX(0deg);
+		}
+	}
 }
