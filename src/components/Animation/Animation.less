@@ -66,5 +66,41 @@
 		100% {
 			transform: scale(1);
 		}
+	}
+
+	/* 动画4 */
+	.bounce-enter-active-1 {
+		animation: bounce-in 10s;
+	}
+
+	.bounce-leave-active-1 {
+		animation: bounce-in 2s reverse;
+	}
+
+	/* 动画5 */
+	.title-appear-to {
+		opacity: 1;
+	}
+
+	.title-appear-active {
+		animation: title-fade-in 0.5s;
+	}
+
+	@keyframes title-fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}	
+
+	@-webkit-keyframes title-fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}	
 }
