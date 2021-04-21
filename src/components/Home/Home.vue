@@ -57,6 +57,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onAnimation'>
 				动画演示
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onAnimationList'>
+				列表动画演示
+			</div>
 		</div>
 	</div>
 </template>
@@ -190,6 +193,12 @@ export default {
 			console.log('On demo animation');
 			
 			this.route('Animation');
+		},
+
+		onAnimationList() {
+			console.log('On demo animation list');
+			
+			this.route('AnimationList');
 		},
 
 		/*************************/
