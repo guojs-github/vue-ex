@@ -18,6 +18,7 @@ import ProvideInject from '@/components/ProvideInject/ProvideInject.vue';
 import DynamicLoad from '@/components/DynamicLoad/DynamicLoad.vue';
 import Animation from '@/components/Animation/Animation.vue';
 import AnimationList from '@/components/AnimationList/AnimationList.vue';
+import AnimationState from '@/components/AnimationState/AnimationState.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -95,6 +96,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/AnimationList',
 	name: 'AnimationList',
 	component: AnimationList
+}, {
+	path: '/AnimationState',
+	name: 'AnimationState',
+	component: AnimationState
 }];
 
 const router = createRouter({

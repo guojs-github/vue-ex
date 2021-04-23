@@ -51,14 +51,17 @@
 			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onProvideInject'>
 				Provide&Inject
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onDynamicLoad'>
+			<div class='-inline -ef-click -light-red -red-button test-dynamic-load' @click='onDynamicLoad'>
 				动态加载组件
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onAnimation'>
+			<div class='-inline -ef-click -light-red -red-button test-animation' @click='onAnimation'>
 				动画演示
 			</div>
-			<div class='-inline -ef-click -light-red -red-button test-provide-inject' @click='onAnimationList'>
+			<div class='-inline -ef-click -light-red -red-button test-animation-list' @click='onAnimationList'>
 				列表动画演示
+			</div>
+			<div class='-inline -ef-click -light-red -red-button test-animation-state' @click='onAnimationState'>
+				状态动画演示
 			</div>
 		</div>
 	</div>
@@ -199,6 +202,12 @@ export default {
 			console.log('On demo animation list');
 			
 			this.route('AnimationList');
+		},
+
+		onAnimationState() {
+			console.log('On demo animation state');
+			
+			this.route('AnimationState');
 		},
 
 		/*************************/
