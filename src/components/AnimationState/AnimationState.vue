@@ -29,7 +29,7 @@
 					cy='100' 
 					r='90'/>
 			</svg>			
-			<label>多数: {{ sides }}</label>
+			<label>边数: {{ sides }}</label>
 			<input 
 				type='range' 
 				min='3' 
