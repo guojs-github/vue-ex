@@ -47,18 +47,35 @@
 				min='0' max='10' 
 				v-model.number='updateInterval'/>
 		</div>
+
+		<div class='row-demo'>
+			<div class='sub-title'>
+				样例3、组件封装
+			</div>
+
+			<input v-model.number='firstNumber' type='number' step='20' /> +
+			<input v-model.number='secondNumber' type='number' step='20' /> = {{ result }}
+			<p>
+				<animated-integer :value='firstNumber'></animated-integer> +
+				<animated-integer :value='secondNumber'></animated-integer> =
+				<animated-integer :value='result'></animated-integer>
+			</p>			
+		</div>
 	</div>
 </template>
 
 <script>
 import { gsap } from 'gsap';
+import AnimatedInteger from './AnimatedInteger';
 
 const defaultSides = 10;
 
 export default {
 	name: 'AnimationState', 
 	
-	components: {},
+	components: {
+		AnimatedInteger
+	},
 	
 	data() {
 		return {
@@ -70,13 +87,20 @@ export default {
 			sides: defaultSides, // 多边形变数
 			minRadius: 50, // 最小半径
 			interval: null, // 任务句柄
-			updateInterval: 0 // 动画长度毫秒
+			updateInterval: 0, // 动画长度毫秒
+
+			firstNumber: 20, // 操作数1
+			secondNumber: 40 // 操作数2
 		};
 	},
 
 	computed: {
 		animatedNumber() {
 			return this.tweenedNumber.toFixed(0);
+		},
+
+		result() {
+			return this.firstNumber + this.secondNumber;
 		}
 	},
 
