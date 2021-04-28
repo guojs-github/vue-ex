@@ -63,6 +63,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-animation-state' @click='onAnimationState'>
 				状态动画演示
 			</div>
+			<div class='-inline -ef-click -light-red -red-button test-composite' @click='onComposite'>
+				组合API
+			</div>
 		</div>
 	</div>
 </template>
@@ -208,6 +211,12 @@ export default {
 			console.log('On demo animation state');
 			
 			this.route('AnimationState');
+		},
+
+		onComposite() {
+			console.log('On demo composite');
+			
+			this.route('Composite');
 		},
 
 		/*************************/
