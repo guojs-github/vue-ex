@@ -20,6 +20,7 @@ import Animation from '@/components/Animation/Animation.vue';
 import AnimationList from '@/components/AnimationList/AnimationList.vue';
 import AnimationState from '@/components/AnimationState/AnimationState.vue';
 import Composite from '@/components/Composite/Composite.vue';
+import TemplateReference from '@/components/TemplateReference/TemplateReference.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -105,6 +106,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Composite',
 	name: 'Composite',
 	component: Composite
+}, {
+	path: '/TemplateReference',
+	name: 'TemplateReference',
+	component: TemplateReference
 }];
 
 const router = createRouter({

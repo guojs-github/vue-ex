@@ -66,6 +66,9 @@
 			<div class='-inline -ef-click -light-red -red-button test-composite' @click='onComposite'>
 				组合API
 			</div>
+			<div class='-inline -ef-click -light-red -red-button template-reference' @click='onTemplateReference'>
+				模板演示
+			</div>
 		</div>
 	</div>
 </template>
@@ -217,6 +220,12 @@ export default {
 			console.log('On demo composite');
 			
 			this.route('Composite');
+		},
+
+		onTemplateReference() {
+			console.log('On demo template reference');
+			
+			this.route('TemplateReference');
 		},
 
 		/*************************/
