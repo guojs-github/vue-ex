@@ -21,6 +21,7 @@ import AnimationList from '@/components/AnimationList/AnimationList.vue';
 import AnimationState from '@/components/AnimationState/AnimationState.vue';
 import Composite from '@/components/Composite/Composite.vue';
 import TemplateReference from '@/components/TemplateReference/TemplateReference.vue';
+import Mixin from '@/components/Mixin/Mixin.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -110,6 +111,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/TemplateReference',
 	name: 'TemplateReference',
 	component: TemplateReference
+}, {
+	path: '/Mixin',
+	name: 'Mixin',
+	component: Mixin
 }];
 
 const router = createRouter({

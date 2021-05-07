@@ -69,6 +69,9 @@
 			<div class='-inline -ef-click -light-red -red-button template-reference' @click='onTemplateReference'>
 				模板演示
 			</div>
+			<div class='-inline -ef-click -light-red -red-button mixin' @click='onMixin'>
+				Mixin
+			</div>
 		</div>
 	</div>
 </template>
@@ -226,6 +229,12 @@ export default {
 			console.log('On demo template reference');
 			
 			this.route('TemplateReference');
+		},
+
+		onMixin() {
+			console.log('On demo mixin');
+			
+			this.route('Mixin');
 		},
 
 		/*************************/
