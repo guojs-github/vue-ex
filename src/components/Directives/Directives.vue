@@ -25,11 +25,15 @@
 			<div class='sub-title'>
 				动态参数
 			</div>
+			<input type='range' min='0' max='500' v-model='padding'>
+			<p v-pin:[direction]='padding'>固定在页面{{direction}}。距离{{padding}}px。</p>
 		</div>
 	</div>
 </template>
 
 <script>
+import pin from './Pin.js';
+
 export default {
 	name: 'Directives', 
 	
@@ -43,11 +47,14 @@ export default {
 				el.style['font-weight'] = binding.value.fontWeight;
 				el.style['font-size'] = binding.value.fontSize;
 			}
-		}
+		},
+		pin: pin
 	},
 	
 	data() {
 		return {
+			direction: 'right',
+			padding: 200
 		};
 	},
 
