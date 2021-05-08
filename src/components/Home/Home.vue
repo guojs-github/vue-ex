@@ -72,6 +72,9 @@
 			<div class='-inline -ef-click -light-red -red-button mixin' @click='onMixin'>
 				Mixin
 			</div>
+			<div class='-inline -ef-click -light-red -red-button directives' @click='onDirectives'>
+				自定义指令（Directives）
+			</div>
 		</div>
 	</div>
 </template>
@@ -235,6 +238,12 @@ export default {
 			console.log('On demo mixin');
 			
 			this.route('Mixin');
+		},
+
+		onDirectives() {
+			console.log('On demo directives');
+			
+			this.route('Directives');
 		},
 
 		/*************************/

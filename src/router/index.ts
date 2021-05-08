@@ -22,6 +22,7 @@ import AnimationState from '@/components/AnimationState/AnimationState.vue';
 import Composite from '@/components/Composite/Composite.vue';
 import TemplateReference from '@/components/TemplateReference/TemplateReference.vue';
 import Mixin from '@/components/Mixin/Mixin.vue';
+import Directives from '@/components/Directives/Directives.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -115,6 +116,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Mixin',
 	name: 'Mixin',
 	component: Mixin
+}, {
+	path: '/Directives',
+	name: 'Directives',
+	component: Directives
 }];
 
 const router = createRouter({
