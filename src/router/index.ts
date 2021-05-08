@@ -23,6 +23,7 @@ import Composite from '@/components/Composite/Composite.vue';
 import TemplateReference from '@/components/TemplateReference/TemplateReference.vue';
 import Mixin from '@/components/Mixin/Mixin.vue';
 import Directives from '@/components/Directives/Directives.vue';
+import Teleport from '@/components/Teleport/Teleport.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -120,6 +121,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Directives',
 	name: 'Directives',
 	component: Directives
+}, {
+	path: '/Teleport',
+	name: 'Teleport',
+	component: Teleport
 }];
 
 const router = createRouter({

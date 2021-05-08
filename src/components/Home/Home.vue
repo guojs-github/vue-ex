@@ -75,6 +75,9 @@
 			<div class='-inline -ef-click -light-red -red-button directives' @click='onDirectives'>
 				自定义指令（Directives）
 			</div>
+			<div class='-inline -ef-click -light-red -red-button teleport' @click='onTeleport'>
+				Teleport（传送）
+			</div>
 		</div>
 	</div>
 </template>
@@ -244,6 +247,12 @@ export default {
 			console.log('On demo directives');
 			
 			this.route('Directives');
+		},
+
+		onTeleport() {
+			console.log('On demo Teleport');
+			
+			this.route('Teleport');
 		},
 
 		/*************************/
