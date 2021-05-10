@@ -24,6 +24,7 @@ import TemplateReference from '@/components/TemplateReference/TemplateReference.
 import Mixin from '@/components/Mixin/Mixin.vue';
 import Directives from '@/components/Directives/Directives.vue';
 import Teleport from '@/components/Teleport/Teleport.vue';
+import Render from '@/components/Render/Render.vue';
 
 const routes: Array<RouteRecordRaw> = [{
 	path: '/',
@@ -125,6 +126,10 @@ const routes: Array<RouteRecordRaw> = [{
 	path: '/Teleport',
 	name: 'Teleport',
 	component: Teleport
+}, {
+	path: '/Render',
+	name: 'Render',
+	component: Render
 }];
 
 const router = createRouter({

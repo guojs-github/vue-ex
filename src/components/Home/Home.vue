@@ -78,6 +78,9 @@
 			<div class='-inline -ef-click -light-red -red-button teleport' @click='onTeleport'>
 				Teleport（传送）
 			</div>
+			<div class='-inline -ef-click -light-red -red-button render' @click='onRender'>
+				渲染函数
+			</div>
 		</div>
 	</div>
 </template>
@@ -253,6 +256,12 @@ export default {
 			console.log('On demo Teleport');
 			
 			this.route('Teleport');
+		},
+
+		onRender() {
+			console.log('On demo Render');
+			
+			this.route('Render');
 		},
 
 		/*************************/
