@@ -81,6 +81,9 @@
 			<div class='-inline -ef-click -light-red -red-button render' @click='onRender'>
 				渲染函数
 			</div>
+			<div class='-inline -ef-click -light-red -red-button plugins' @click='onPlugins'>
+				插件
+			</div>
 		</div>
 	</div>
 </template>
@@ -262,6 +265,12 @@ export default {
 			console.log('On demo Render');
 			
 			this.route('Render');
+		},
+
+		onPlugins() {
+			console.log('On demo Plugins');
+			
+			this.route('Plugins');
 		},
 
 		/*************************/
